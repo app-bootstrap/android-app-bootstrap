@@ -1,4 +1,4 @@
-package com.github.android_app_bootstrap;
+package com.github.android_app_bootstrap.activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
