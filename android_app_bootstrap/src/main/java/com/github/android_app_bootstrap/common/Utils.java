@@ -5,3 +5,4 @@ package com.github.android_app_bootstrap.common;
  */
 public class Utils {
 }
+
