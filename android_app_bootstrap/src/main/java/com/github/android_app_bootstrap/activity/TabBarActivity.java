@@ -17,7 +17,7 @@ public class TabBarActivity extends FragmentActivity {
 
     private LayoutInflater layoutInflater;
 
-    private Class fragmentArray[] = {HomeActivity.class, PersonalActivity.class};
+    private Class fragmentArray[] = {HomeFragment.class, PersonalFragment.class};
 
     private int imageViewArray[] = {R.drawable.tab_home_btn, R.drawable.tab_personal_btn};
 
