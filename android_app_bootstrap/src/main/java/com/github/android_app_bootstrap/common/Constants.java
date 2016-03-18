@@ -10,5 +10,5 @@ public class Constants {
     public static final String CUSTOM_UA_FIELD = "xdf";
     public static final String TEST_PAGE = "file:///android_asset/test.html";
     public static final String WEB_PAGE = "https://www.baidu.com";
-    public static final String[] TAB_LIST = {"Home", "Webview", "Baidu", "Personal"};
+    public static final String[] TAB_LIST = {"Home", "Webview", "Baidu", "PERSONAL"};
 }
