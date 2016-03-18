@@ -1,4 +1,4 @@
-package com.github.android_app_bootstrap.activity;
+package com.github.android_app_bootstrap.widget;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,8 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.github.android_app_bootstrap.R;
+import com.github.android_app_bootstrap.common.Constants;
 
-public class PersonalFragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -22,8 +23,6 @@ public class PersonalFragment extends Fragment {
 
         TextView titleTextView = (TextView) view.findViewById(R.id.title_text);
 
-        titleTextView.setText("我的");
-
+        titleTextView.setText(Constants.TAB_LIST[0]);
     }
-
 }

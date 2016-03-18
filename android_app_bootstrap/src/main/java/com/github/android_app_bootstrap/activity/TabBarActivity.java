@@ -10,6 +10,11 @@ import android.widget.TabHost.TabSpec;
 import android.widget.TextView;
 
 import com.github.android_app_bootstrap.R;
+import com.github.android_app_bootstrap.common.Constants;
+import com.github.android_app_bootstrap.widget.HomeFragment;
+import com.github.android_app_bootstrap.widget.PersonalFragment;
+import com.github.android_app_bootstrap.widget.SecondFragment;
+import com.github.android_app_bootstrap.widget.ThirdFragment;
 
 public class TabBarActivity extends FragmentActivity {
 
@@ -17,16 +22,13 @@ public class TabBarActivity extends FragmentActivity {
 
     private LayoutInflater layoutInflater;
 
-    private Class fragmentArray[] = {HomeFragment.class, PersonalFragment.class};
+    private Class fragmentArray[] = {HomeFragment.class, SecondFragment.class, ThirdFragment.class, PersonalFragment.class};
 
-    private int imageViewArray[] = {R.drawable.tab_home_btn, R.drawable.tab_personal_btn};
-
-    private String textViewArray[] = {"首页", "我的"};
+    private int imageViewArray[] = {R.drawable.tab_home_btn, R.drawable.tab_webview_btn, R.drawable.tab_test_btn, R.drawable.tab_personal_btn};
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_tab_activity);
-
         initView();
     }
 
@@ -39,7 +41,7 @@ public class TabBarActivity extends FragmentActivity {
 
         for (int i = 0; i < fragmentArray.length; i++) {
 
-            TabSpec tabSpec = fragmentTabHost.newTabSpec(textViewArray[i])
+            TabSpec tabSpec = fragmentTabHost.newTabSpec(Constants.TAB_LIST[i])
                     .setIndicator(getTabItemView(i));
 
             fragmentTabHost.addTab(tabSpec, fragmentArray[i], null);
@@ -53,7 +55,7 @@ public class TabBarActivity extends FragmentActivity {
         imageView.setImageResource(imageViewArray[index]);
 
         TextView textView = (TextView) view.findViewById(R.id.textview);
-        textView.setText(textViewArray[index]);
+        textView.setText(Constants.TAB_LIST[index]);
 
         return view;
     }
