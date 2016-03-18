@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">android_app_bootstrap</string>
+    <string name="title">Android Bootstrap</string>
+    <string name="title_placeholder">Loading...</string>
+    <string name="login">Login</string>
+    <string name="logout">Logout</string>
+    <string name="username_tips">please input username</string>
+    <string name="password_tips">please input password</string>
 </resources>

@@ -1,7 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/mintcream" >
+    android:layout_height="46dp"
+    android:background="#24282C">
 
     <Button
         android:id="@+id/title_button_left"
@@ -11,23 +11,18 @@
         android:background="#00000000"
         android:gravity="center_vertical|left"
         android:paddingLeft="10dp"
-        android:visibility="gone"
         android:text="left"
-        android:textColor="#0074ea" />
+        android:textColor="#0074ea"
+        android:visibility="gone" />
 
     <TextView
         android:id="@+id/title_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:shadowColor="#eee"
-        android:shadowDx="1"
-        android:shadowDy="1"
-        android:shadowRadius="1"
-        android:text="@string/app_name"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+        android:text="@string/title_placeholder"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/title_button_right"
@@ -37,7 +32,7 @@
         android:background="#00000000"
         android:gravity="center_vertical|right"
         android:paddingRight="10dp"
-        android:visibility="gone"
         android:text="right"
-        android:textColor="#0074ea" />
+        android:textColor="#0074ea"
+        android:visibility="gone" />
 </RelativeLayout>
