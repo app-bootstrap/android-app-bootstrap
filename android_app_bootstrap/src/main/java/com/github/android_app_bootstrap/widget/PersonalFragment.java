@@ -13,7 +13,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.github.android_app_bootstrap.R;
-import com.github.android_app_bootstrap.activity.LoginActivity;
+import com.github.android_app_bootstrap.activity.*;
 import com.github.android_app_bootstrap.common.Constants;
 
 public class PersonalFragment extends Fragment implements Callback, OnClickListener {

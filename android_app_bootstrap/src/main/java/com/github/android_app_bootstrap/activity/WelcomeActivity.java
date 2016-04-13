@@ -26,7 +26,6 @@ public class WelcomeActivity extends Activity {
     }
 
     public void initView() {
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {

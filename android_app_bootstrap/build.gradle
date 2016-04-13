@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "23.0.0 rc3"
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "com.github.android_app_bootstrap"
