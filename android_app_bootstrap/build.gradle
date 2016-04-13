@@ -2,7 +2,11 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 19
-    buildToolsVersion "23.0.0 rc3"
+    buildToolsVersion "23.0.3"
+
+    lintOptions {
+        abortOnError false
+    }
 
     defaultConfig {
         applicationId "com.github.android_app_bootstrap"
@@ -20,5 +24,5 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
-    compile files('/Users/xdf/StudioProjects/android-app-bootstrap/libs/fastjson-1.2.1.jar')
+    compile files('../libs/fastjson-1.2.1.jar')
 }

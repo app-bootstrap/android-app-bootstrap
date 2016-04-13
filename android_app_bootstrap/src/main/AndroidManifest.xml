@@ -41,6 +41,16 @@
             android:screenOrientation="portrait">
         </activity>
         <activity
+            android:name=".activity.TableActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name=".activity.ToastActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
             android:name=".activity.WelcomeActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait">
