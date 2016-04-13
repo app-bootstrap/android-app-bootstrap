@@ -4,23 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <include layout="@layout/title" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/title"
-            android:textSize="25dp" />
-
-    </LinearLayout>
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,12 +13,12 @@
         android:paddingRight="20dp">
 
         <Button
-            android:id="@+id/list_button"
+            android:id="@+id/toast_button"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:background="@drawable/round_corner_bg"
             android:gravity="center_vertical|center"
-            android:text="@string/list"
+            android:text="@string/toast"
             android:textColor="@color/white"
             android:textSize="18dp" />
     </LinearLayout>
