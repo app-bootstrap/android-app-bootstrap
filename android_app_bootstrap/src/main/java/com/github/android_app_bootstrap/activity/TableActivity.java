@@ -21,7 +21,24 @@ public class TableActivity extends Activity {
     private static final Utils utils = new Utils();
 
     private static final String[] list = new String[]{
-            "Toast"
+            "Toast",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test",
+            "Test test test"
     };
 
     @Override

@@ -69,10 +69,8 @@
             android:hint="@string/password_tips"
             android:inputType="textNoSuggestions"
             android:orientation="horizontal"
-            android:phoneNumber="true"
             android:singleLine="true"
             android:textColor="@color/black"
-            android:password="true"
             android:textSize="15dp" />
     </RelativeLayout>
 

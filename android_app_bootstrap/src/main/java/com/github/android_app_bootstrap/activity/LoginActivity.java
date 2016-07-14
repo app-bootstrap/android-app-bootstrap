@@ -11,10 +11,12 @@ import android.view.View;
 import android.widget.Button;
 
 import com.github.android_app_bootstrap.R;
+import com.github.android_app_bootstrap.common.Utils;
 
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     private Button button;
+    private Utils utils = new Utils();
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +27,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     public void initView() {
         button = (Button) findViewById(R.id.login_button);
         button.setOnClickListener(this);
+        utils.isWifiConnected(this);
     }
 
     @Override
