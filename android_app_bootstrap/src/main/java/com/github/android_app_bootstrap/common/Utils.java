@@ -6,6 +6,8 @@ package com.github.android_app_bootstrap.common;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
@@ -93,7 +95,7 @@ public class Utils {
         localEditor.commit();
     }
 
-    public String encodeURL(String string) {
+    public static String encodeURL(String string) {
         try {
             String strUTF8 = URLEncoder.encode(string, "UTF-8");
             return strUTF8;
@@ -101,5 +103,20 @@ public class Utils {
             e.printStackTrace();
         }
         return "";
+    }
+
+    public static boolean isWifiConnected(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetInfo = connectivityManager.getActiveNetworkInfo();
+
+        if (activeNetInfo != null) {
+            Toast.makeText(context, "Active Network: " + activeNetInfo.getTypeName(), Toast.LENGTH_SHORT).show();
+
+            if (ConnectivityManager.TYPE_WIFI == activeNetInfo.getType()) {
+                return true;
+            }
+        }
+        return false;
     }
 }
