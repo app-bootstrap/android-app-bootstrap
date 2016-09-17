@@ -13,3 +13,5 @@ lint.xml
 *~
 */keystore
 custom-versions/*
+*.sw*
+*.un~
