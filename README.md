@@ -6,6 +6,10 @@ A starting tutorial for Android application.
 
 [native-in-practice](https://xudafeng.github.io/slide/archives/native-in-practice)
 
+## Output
+
+npmcdn.com: [android_app_bootstrap-debug.apk](//npmcdn.com/android-app-bootstrap@1.0.0/android_app_bootstrap/build/outputs/apk/android_app_bootstrap-debug.apk)
+
 ## License
 
 The MIT License (MIT)

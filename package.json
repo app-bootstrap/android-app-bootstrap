@@ -1,0 +1,13 @@
+{
+  "name": "android-app-bootstrap",
+  "version": "1.0.0",
+  "description": "A starting tutorial for Android application.",
+  "keywords": [
+    "Android"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xudafeng/android-app-bootstrap.git"
+  },
+  "license": "MIT"
+}
