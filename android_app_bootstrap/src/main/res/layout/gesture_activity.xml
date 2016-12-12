@@ -14,15 +14,14 @@
         android:id="@+id/text"
         android:layout_width="150dp"
         android:layout_height="70dp"
-        android:background="#00a1ff"
-        android:textColor="#00005f"/>
+        android:background="@color/mainblue"
+        android:textColor="#ffffff"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="matrix"
-        android:background="#00000000"
-        android:visibility="invisible"/>
+        android:background="#00000000"/>
 
 </RelativeLayout>
