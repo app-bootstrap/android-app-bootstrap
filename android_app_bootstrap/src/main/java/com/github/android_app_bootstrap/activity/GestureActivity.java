@@ -9,19 +9,14 @@ import android.graphics.Matrix;
 import android.graphics.PointF;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.Display;
-import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.github.android_app_bootstrap.R;
-import com.github.android_app_bootstrap.common.Utils;
 import com.github.android_app_bootstrap.gesture.MoveGestureDetector;
 import com.github.android_app_bootstrap.gesture.RotateGestureDetector;
 import com.github.android_app_bootstrap.gesture.ShoveGestureDetector;
@@ -60,7 +55,7 @@ public class GestureActivity extends Activity implements View.OnTouchListener {
         mFocusX = display.getWidth()/2f;
         mFocusY = display.getHeight()/2f;
 
-        Drawable d 		= this.getResources().getDrawable(R.drawable.earth);
+        Drawable d 		= this.getResources().getDrawable(R.drawable.macaca);
         mImageHeight 	= d.getIntrinsicHeight();
         mImageWidth 	= d.getIntrinsicWidth();
 
