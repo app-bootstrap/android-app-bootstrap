@@ -37,11 +37,12 @@ public class TableActivity extends Activity {
                 Toast.makeText(TableActivity.this, getData().get(position), Toast.LENGTH_SHORT).show();
                 switch (position) {
                     case 0:
-                        Intent intent = new Intent(TableActivity.this, ToastActivity.class);
-                        startActivity(intent);
+                        Intent toastIntent = new Intent(TableActivity.this, ToastActivity.class);
+                        startActivity(toastIntent);
                         break;
                     case 1:
-
+                        Intent gestureIntent = new Intent(TableActivity.this, GestureActivity.class);
+                        startActivity(gestureIntent);
                         break;
                 }
             }
@@ -52,6 +53,7 @@ public class TableActivity extends Activity {
     private List<String> getData() {
         List<String> data = new ArrayList<String>();
         data.add("Toast");
+        data.add("Gesture");
         data.add("Test test test");
         data.add("Test test test");
         data.add("Test test test");

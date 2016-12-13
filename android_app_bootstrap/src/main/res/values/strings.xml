@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">android_app_bootstrap</string>
+    <string name="app_name">Bootstrap</string>
     <string name="title">Android Bootstrap</string>
     <string name="title_placeholder">Loading...</string>
     <string name="login">Login</string>
