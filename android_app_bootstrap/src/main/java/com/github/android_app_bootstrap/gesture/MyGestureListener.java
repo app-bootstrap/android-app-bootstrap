@@ -37,15 +37,72 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener{
     }
 
 
+    int threshold = 20;
+    float angleThreshold = 0.3f;
+
+    //// TODO: 2016/12/14 Generate Pinch Gesture
+    float pinchThreshold = 5f;
 
     public boolean onScroll(MotionEvent e1, MotionEvent e2,
                             float distanceX, float distanceY) {
+        int pointCount = e2.getActionIndex();
+        if (pointCount > 1) {
+            if (judgeRotate(e1, e2, distanceX, distanceY)) {
+
+            } else if (judgePinch( e1,  e2,
+             distanceX,  distanceY)) {
+
+            }
+        } else {
+            double distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY );
+
+            if (distanceX > threshold || distanceY > threshold || distance > threshold) {
+                gestureName = GESTURE_DRAG;
+                axis_x = e2.getX();
+                axis_y = e2.getY();
+                gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+            }
+        }
         return false;
     }
 
     public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
                            float velocityY) {
         return false;
+    }
+
+
+    private boolean judgeRotate(MotionEvent e1, MotionEvent e2,
+                             float distanceX, float distanceY) {
+        boolean res = false;
+
+        double angel = Math.atan((double) distanceY / distanceX);
+        if (Math.abs(angel) > angleThreshold) {
+            res = true;
+            gestureName = GESTURE_ROTATE;
+            axis_x = e2.getX();
+            axis_y = e2.getY();
+            gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y + " rotate :" + angel);
+        }
+
+        return res;
+    }
+
+    double lastDist = -1;
+    private boolean judgePinch(MotionEvent e1, MotionEvent e2,
+                               float distanceX, float distanceY) {
+        boolean res = false;
+
+        double dist = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        if (dist != lastDist) {
+//            res = true;
+            gestureName = GESTURE_PINCH;
+            axis_x = e2.getX();
+            axis_y = e2.getY();
+            gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+        }
+
+        return res;
     }
 
 
