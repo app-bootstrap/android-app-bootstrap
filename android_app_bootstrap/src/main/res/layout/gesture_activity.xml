@@ -11,7 +11,7 @@
     >
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/info"
         android:layout_width="150dp"
         android:layout_height="70dp"
         android:background="@color/mainblue"
