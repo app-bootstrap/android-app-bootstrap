@@ -28,7 +28,7 @@ public class GestureActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.gesture_activity);
-        dispGestureLabel = (TextView) findViewById(R.id.text);
+        dispGestureLabel = (TextView) findViewById(R.id.info);
         gestureListener = new MyGestureListener(dispGestureLabel);
         scaleGestureListener = new MyScaleGestureListener(dispGestureLabel);
         gestureDetector = new GestureDetector(this, gestureListener);
