@@ -45,6 +45,4 @@ public class GestureActivity extends Activity {
     public void onDestroy() {
         super.onDestroy();
     }
-
-
 }

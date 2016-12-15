@@ -23,12 +23,28 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
     private float axis_y;
 
     private static final float DRAG_THRESHOLD = 10f;
-
     public MyGestureListener(TextView textView) {
         gestureLabel = textView;
     }
 
-    //single tap gesture detect
+
+    public boolean onSingleTapUp(MotionEvent e) {
+        return false;
+    }
+
+
+
+    public boolean onScroll(MotionEvent e1, MotionEvent e2,
+                            float distanceX, float distanceY) {
+        return false;
+    }
+
+    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+                           float velocityY) {
+        return false;
+    }
+    
+     //single tap gesture detect
     public boolean onSingleTapConfirmed(MotionEvent e) {
         gestureName = GESTURE_SINGLE_TAP;
         axis_x = e.getX();
@@ -36,6 +52,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
         return super.onSingleTapConfirmed(e);
     }
+
 
     //double tap gesture detect
     public boolean onDoubleTap(MotionEvent e) {
@@ -46,6 +63,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         return super.onDoubleTap(e);
     }
 
+
     //long press gesture detect
     public void onLongPress(MotionEvent e) {
         gestureName = GESTURE_LONG_PRESS;
@@ -53,6 +71,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         axis_y = e.getY();
         gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
     }
+
 
     //Gesture drag detect
     public boolean onScroll(MotionEvent e1, MotionEvent e2,
@@ -66,6 +85,5 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         }
         return false;
     }
-
 
 }
