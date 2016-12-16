@@ -31,18 +31,6 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
     public boolean onSingleTapUp(MotionEvent e) {
         return false;
     }
-
-
-
-    public boolean onScroll(MotionEvent e1, MotionEvent e2,
-                            float distanceX, float distanceY) {
-        return false;
-    }
-
-    public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
-                           float velocityY) {
-        return false;
-    }
     
      //single tap gesture detect
     public boolean onSingleTapConfirmed(MotionEvent e) {
