@@ -31,6 +31,7 @@
 
         <Button
             android:id="@+id/list_button"
+            android:contentDescription="contentdesctest"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:background="@drawable/round_corner_bg"
