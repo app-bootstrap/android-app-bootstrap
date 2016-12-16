@@ -5,16 +5,15 @@ package com.github.android_app_bootstrap.activity;
  */
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.github.android_app_bootstrap.R;
 import com.github.android_app_bootstrap.common.Utils;
 
-public class ToastActivity extends Activity implements View.OnClickListener {
+public class AlertActivity extends Activity implements View.OnClickListener {
 
     private final Utils utils = new Utils();
 
@@ -27,19 +26,24 @@ public class ToastActivity extends Activity implements View.OnClickListener {
     public void initView() {
         Button button = (Button) findViewById(R.id.alert_button);
         button.setOnClickListener(this);
+        showSimpleDialog();
     }
 
-    void showToast() {
-        Toast toast = Toast.makeText(getApplicationContext(), "Hello", Toast.LENGTH_SHORT);
-        toast.setGravity(Gravity.TOP | Gravity.CENTER, -50, 100);
-        toast.show();
+    private void showSimpleDialog() {
+        new AlertDialog.Builder(this)
+                .setTitle(R.string.app_name)
+                .setMessage("haha~")
+                .setPositiveButton("yes", null)
+                .setNegativeButton("no", null)
+                .show();
     }
+
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.alert_button:
-                showToast();
+                showSimpleDialog();
                 break;
 
         }

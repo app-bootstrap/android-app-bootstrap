@@ -7,6 +7,7 @@
     <string name="logout">Logout</string>
     <string name="list">list</string>
     <string name="toast">Toast</string>
+    <string name="alert">Show Dialog</string>
     <string name="webview">Webview</string>
     <string name="username_tips">please input username</string>
     <string name="password_tips">please input password</string>

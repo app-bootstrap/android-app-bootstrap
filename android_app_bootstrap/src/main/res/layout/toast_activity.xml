@@ -13,12 +13,12 @@
         android:paddingRight="20dp">
 
         <Button
-            android:id="@+id/toast_button"
+            android:id="@+id/alert_button"
             android:layout_width="match_parent"
             android:layout_height="38dp"
             android:background="@drawable/round_corner_bg"
             android:gravity="center_vertical|center"
-            android:text="@string/toast"
+            android:text="@string/alert"
             android:textColor="@color/white"
             android:textSize="18dp" />
     </LinearLayout>

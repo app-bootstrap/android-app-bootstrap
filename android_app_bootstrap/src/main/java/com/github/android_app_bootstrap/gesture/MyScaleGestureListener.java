@@ -62,7 +62,7 @@ public class MyScaleGestureListener extends ScaleGestureDetector.SimpleOnScaleGe
             gestureName = GESTURE_ROTATE;
             focus_x = detector.getFocusX();
             focus_y = detector.getFocusY();
-            gestureLabel.setText(gestureName + " x:" + focus_x + " y:" + focus_y + "\ndeltaAngel:" + rotate);
+            gestureLabel.setText(gestureName + "\n x:" + focus_x + " y:" + focus_y + "\ndeltaAngel:" + rotate);
         }
         return res;
     }
@@ -78,7 +78,7 @@ public class MyScaleGestureListener extends ScaleGestureDetector.SimpleOnScaleGe
             focus_x = detector.getFocusX();
             focus_y = detector.getFocusY();
 
-            gestureLabel.setText(gestureName + " x:" + focus_x + " y:" + focus_y + "\npinch:" + pinch);
+            gestureLabel.setText(gestureName + "\n x:" + focus_x + " y:" + focus_y + "\npinch:" + pinch);
         }
         return res;
     }

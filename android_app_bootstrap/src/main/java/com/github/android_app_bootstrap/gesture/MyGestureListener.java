@@ -37,7 +37,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         gestureName = GESTURE_SINGLE_TAP;
         axis_x = e.getX();
         axis_y = e.getY();
-        gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+        gestureLabel.setText(gestureName + "\n x:" + axis_x + " y:" + axis_y);
         return super.onSingleTapConfirmed(e);
     }
 
@@ -47,7 +47,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         gestureName = GESTURE_DOUBLE_TAP;
         axis_x = e.getX();
         axis_y = e.getY();
-        gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+        gestureLabel.setText(gestureName + "\n x:" + axis_x + " y:" + axis_y);
         return super.onDoubleTap(e);
     }
 
@@ -57,7 +57,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
         gestureName = GESTURE_LONG_PRESS;
         axis_x = e.getX();
         axis_y = e.getY();
-        gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+        gestureLabel.setText(gestureName + "\n x:" + axis_x + " y:" + axis_y);
     }
 
 
@@ -69,7 +69,7 @@ public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
             gestureName = GESTURE_DRAG;
             axis_x = e2.getX();
             axis_y = e2.getY();
-            gestureLabel.setText(gestureName + " x:" + axis_x + " y:" + axis_y);
+            gestureLabel.setText(gestureName + "\n x:" + axis_x + " y:" + axis_y);
         }
         return false;
     }

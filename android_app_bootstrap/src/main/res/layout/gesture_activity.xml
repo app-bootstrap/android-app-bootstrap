@@ -3,25 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/gesture_root"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    >
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/info"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:background="@color/mainblue"
-        android:textColor="#ffffff"/>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center|center_horizontal|center_vertical">
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="150dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center"
+            android:background="@color/mainblue"
+            android:textColor="#ffffff" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scaleType="matrix"
-        android:background="#00000000"/>
+        android:background="#00000000"
+        android:scaleType="matrix" />
 
 </RelativeLayout>
