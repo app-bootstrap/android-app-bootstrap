@@ -25,7 +25,7 @@ public class ToastActivity extends Activity implements View.OnClickListener {
     }
 
     public void initView() {
-        Button button = (Button) findViewById(R.id.toast_button);
+        Button button = (Button) findViewById(R.id.alert_button);
         button.setOnClickListener(this);
     }
 
@@ -38,7 +38,7 @@ public class ToastActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.toast_button:
+            case R.id.alert_button:
                 showToast();
                 break;
 

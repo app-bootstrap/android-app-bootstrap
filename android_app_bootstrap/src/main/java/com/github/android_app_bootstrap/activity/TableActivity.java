@@ -44,6 +44,10 @@ public class TableActivity extends Activity {
                         Intent gestureIntent = new Intent(TableActivity.this, GestureActivity.class);
                         startActivity(gestureIntent);
                         break;
+                    case 2:
+                        Intent alertIntent = new Intent(TableActivity.this, AlertActivity.class);
+                        startActivity(alertIntent);
+                        break;
                 }
             }
         });
@@ -54,7 +58,7 @@ public class TableActivity extends Activity {
         List<String> data = new ArrayList<String>();
         data.add("Toast");
         data.add("Gesture");
-        data.add("Test test test");
+        data.add("Alert");
         data.add("Test test test");
         data.add("Test test test");
         data.add("Test test test");
