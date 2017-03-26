@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.github.android_app_bootstrap.R;
 import com.github.android_app_bootstrap.common.Utils;
@@ -16,6 +17,8 @@ import com.github.android_app_bootstrap.common.Utils;
 public class LoginActivity extends Activity implements View.OnClickListener {
 
     private Button button;
+    private EditText mobileNoEditText;
+    private EditText codeEditText;
     private Utils utils = new Utils();
 
     public void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,18 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
     public void initView() {
         button = (Button) findViewById(R.id.login_button);
+        mobileNoEditText = (EditText) findViewById(R.id.mobileNoEditText);
+        mobileNoEditText.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View view) {
+                return true;
+            }
+        });
+        codeEditText = (EditText) findViewById(R.id.codeEditText);
+        codeEditText.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View view) {
+                return true;
+            }
+        });
         button.setOnClickListener(this);
         utils.isWifiConnected(this);
     }

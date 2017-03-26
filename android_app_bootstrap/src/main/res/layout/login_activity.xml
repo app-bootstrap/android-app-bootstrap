@@ -37,11 +37,12 @@
             android:layout_height="40dp"
             android:layout_marginLeft="2dp"
             android:layout_weight="0.52"
+            android:longClickable="false"
             android:background="@null"
             android:hint="@string/username_tips"
             android:inputType="textNoSuggestions"
             android:orientation="horizontal"
-            android:singleLine="true"
+            android:selectAllOnFocus="false"
             android:textColor="@color/black"
             android:textSize="15dp" />
 
@@ -64,12 +65,13 @@
             android:layout_height="40dp"
             android:layout_marginLeft="2dp"
             android:layout_weight="0.98"
+            android:longClickable="false"
             android:background="@null"
             android:digits="0123456789"
             android:hint="@string/password_tips"
             android:inputType="textNoSuggestions"
             android:orientation="horizontal"
-            android:singleLine="true"
+            android:selectAllOnFocus="false"
             android:textColor="@color/black"
             android:textSize="15dp" />
     </RelativeLayout>
