@@ -48,6 +48,10 @@ public class TableActivity extends Activity {
                         Intent alertIntent = new Intent(TableActivity.this, AlertActivity.class);
                         startActivity(alertIntent);
                         break;
+                    case 3:
+                        Intent locationIntent = new Intent(TableActivity.this, LocationActivity.class);
+                        startActivity(locationIntent);
+                        break;
                 }
             }
         });
@@ -59,7 +63,7 @@ public class TableActivity extends Activity {
         data.add("Toast");
         data.add("Gesture");
         data.add("Alert");
-        data.add("Test test test");
+        data.add("Location");
         data.add("Test test test");
         data.add("Test test test");
         data.add("Test test test");
