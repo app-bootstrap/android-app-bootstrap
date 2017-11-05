@@ -6,6 +6,11 @@ A starting tutorial for Android application.
 
 [native-in-practice](//xudafeng.github.io/slide/archives/native-in-practice)
 
+## Build
+
+``` bash
+$ ./gradlew clean createDebugCoverageReport
+```
 ## Output
 
 npmcdn.com: [android_app_bootstrap-debug.apk](//npmcdn.com/android-app-bootstrap@latest/android_app_bootstrap/build/outputs/apk/android_app_bootstrap-debug.apk)
