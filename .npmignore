@@ -25,3 +25,7 @@ android_app_bootstrap/build/generated
 android_app_bootstrap/build/intermediates
 android_app_bootstrap/build/tmp
 android_app_bootstrap/build/outputs/logs
+android_app_bootstrap/build/outputs/code-coverage
+android_app_bootstrap/build/outputs/apk/androidTest
+android_app_bootstrap/build/outputs/apk/debug/output.json
+android_app_bootstrap/build/reports
