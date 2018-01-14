@@ -8,7 +8,7 @@ A starting tutorial for Android application.
 
 ## Build
 
-``` bash
+```bash
 $ ./gradlew clean createDebugCoverageReport
 ```
 ## Output
