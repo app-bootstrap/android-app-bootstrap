@@ -105,6 +105,10 @@ public class Utils {
         return "";
     }
 
+    public static String dataHubAdaptor(String APIName) {
+        return (String) Constants.DATAHUB_HOST + "/data/" + Constants.DATAHUB_NAME_1 + "/" + APIName;
+    }
+
     public static boolean isWifiConnected(Context context) {
         ConnectivityManager connectivityManager = (ConnectivityManager) context
                 .getSystemService(Context.CONNECTIVITY_SERVICE);

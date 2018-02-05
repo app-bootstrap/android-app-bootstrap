@@ -52,6 +52,10 @@ public class TableActivity extends Activity {
                         Intent locationIntent = new Intent(TableActivity.this, LocationActivity.class);
                         startActivity(locationIntent);
                         break;
+                    case 4:
+                        Intent dataHubIntent = new Intent(TableActivity.this, DataHubActivity.class);
+                        startActivity(dataHubIntent);
+                        break;
                 }
             }
         });
@@ -64,7 +68,7 @@ public class TableActivity extends Activity {
         data.add("Gesture");
         data.add("Alert");
         data.add("Location");
-        data.add("Test test test");
+        data.add("DataHub");
         data.add("Test test test");
         data.add("Test test test");
         data.add("Test test test");
