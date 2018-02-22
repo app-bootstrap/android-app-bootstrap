@@ -12,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId "com.github.android_app_bootstrap"
-        minSdkVersion 14
-        targetSdkVersion 14
+        minSdkVersion 19
+        targetSdkVersion 19
     }
 
     buildTypes {
@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.android.support:support-v4:19+'
     compile 'com.facebook.fresco:fresco:0.10.0'
     compile "com.alibaba:fastjson:1.2.38"
 }
