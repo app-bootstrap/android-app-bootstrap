@@ -15,9 +15,11 @@ import android.widget.TextView;
 import com.github.android_app_bootstrap.R;
 import com.github.android_app_bootstrap.activity.*;
 import com.github.android_app_bootstrap.common.Constants;
+import com.github.android_app_bootstrap.common.Utils;
 
 public class PersonalFragment extends Fragment implements Callback, OnClickListener {
     private Button button;
+    private Utils utils = new Utils();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -63,6 +65,7 @@ public class PersonalFragment extends Fragment implements Callback, OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.logout_button:
+                utils.collect2ExecFile(false);
                 logout();
                 break;
         }

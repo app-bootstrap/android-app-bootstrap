@@ -8,10 +8,15 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -122,5 +127,36 @@ public class Utils {
             }
         }
         return false;
+    }
+
+    public static void collect2ExecFile(boolean isNew) {
+        String coverageFileDir = Environment.getExternalStorageDirectory()
+                .getPath() + "/coverage.exec";
+        File mCoverageFilePath = new File(coverageFileDir);
+        OutputStream out = null;
+        try {
+            if (isNew && mCoverageFilePath.exists()) {
+                mCoverageFilePath.delete();
+            }
+            if (!mCoverageFilePath.exists()) {
+                mCoverageFilePath.createNewFile();
+            }
+            out = new FileOutputStream(mCoverageFilePath.getPath(), true);
+            Object agent = Class.forName("org.jacoco.agent.rt.RT")
+                    .getMethod("getAgent")
+                    .invoke(null);
+            out.write((byte[]) agent.getClass().getMethod("getExecutionData", boolean.class)
+                    .invoke(agent, false));
+        } catch (Exception e) {
+            Log.i("Jacoco", e.getMessage());
+        } finally {
+            if (out == null)
+                return;
+            try {
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
