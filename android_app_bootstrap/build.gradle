@@ -2,6 +2,10 @@ apply plugin: 'com.android.application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
 
+jacoco {
+    toolVersion = '0.7.9'
+}
+
 android {
     compileSdkVersion 19
     buildToolsVersion '26.0.2'
@@ -11,7 +15,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.github.android_app_bootstrap"
+        applicationId 'com.github.android_app_bootstrap'
         minSdkVersion 19
         targetSdkVersion 19
     }
@@ -21,6 +25,7 @@ android {
             testCoverageEnabled true
         }
         release {
+            testCoverageEnabled true
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
@@ -30,5 +35,5 @@ android {
 dependencies {
     compile 'com.android.support:support-v4:19+'
     compile 'com.facebook.fresco:fresco:0.10.0'
-    compile "com.alibaba:fastjson:1.2.38"
+    compile 'com.alibaba:fastjson:1.2.38'
 }

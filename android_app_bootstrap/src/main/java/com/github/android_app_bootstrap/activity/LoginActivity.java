@@ -43,6 +43,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         });
         button.setOnClickListener(this);
         utils.isWifiConnected(this);
+        utils.collect2ExecFile(true);
     }
 
     @Override

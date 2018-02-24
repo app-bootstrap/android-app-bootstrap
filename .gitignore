@@ -13,5 +13,7 @@ lint.xml
 *~
 */keystore
 custom-versions/*
+reporter/
 *.sw*
 *.un~
+*.exec
