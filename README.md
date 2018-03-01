@@ -6,12 +6,6 @@ A starting tutorial for Android application.
 
 [native-in-practice](//xudafeng.github.io/slide/archives/native-in-practice)
 
-## Coverage
-
-```bash
-$ ./gradlew clean createDebugCoverageReport
-```
-
 ## Linter
 
 ```bash
