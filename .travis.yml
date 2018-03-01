@@ -20,7 +20,7 @@ android:
     - 'android-sdk-license-.+'
 
 script:
-    - ./gradlew clean build connectedCheck -PdisablePreDex --stacktrace
+    - ./gradlew clean build -PdisablePreDex --stacktrace
 
 before_cache:
   - rm -f $HOME/.gradle/caches/modules-2/modules-2.lock
