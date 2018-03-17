@@ -1,9 +1,13 @@
 {
   "name": "android-app-bootstrap",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A starting tutorial for Android application.",
   "keywords": [
     "Android"
+  ],
+  "files": [
+    "android_app_bootstrap/build/outputs/apk/android_app_bootstrap-debug.apk",
+    "index.js"
   ],
   "repository": {
     "type": "git",
