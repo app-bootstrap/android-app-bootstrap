@@ -32,6 +32,18 @@ $ macaca coverage -r java -f ./coverage.exec -c ./android_app_bootstrap/build/in
 
 npmcdn.com: [android_app_bootstrap-debug.apk](//npmcdn.com/android-app-bootstrap@latest/android_app_bootstrap/build/outputs/apk/android_app_bootstrap-debug.apk)
 
+<!-- GITCONTRIBUTOR_START -->
+
+## Contributors
+
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/21149374?v=4" width="100px;"/><br/><sub><b>hanqiongly</b></sub>](https://github.com/hanqiongly)<br/>
+| :---: | :---: |
+
+
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor.git), auto upated at `Sun Mar 25 2018 17:40:17 GMT+0800`.
+
+<!-- GITCONTRIBUTOR_END -->
+
 ## License
 
 The MIT License (MIT)
