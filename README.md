@@ -1,6 +1,6 @@
 # android-app-bootstrap
 
-[![Build Status](https://img.shields.io/travis/xudafeng/android-app-bootstrap.svg?style=flat-square)](https://travis-ci.org/xudafeng/android-app-bootstrap)
+[![Build Status](https://img.shields.io/travis/app-boostrap/android-app-bootstrap.svg?style=flat-square)](https://travis-ci.org/app-boostrap/android-app-bootstrap)
 
 A starting tutorial for Android application.
 
@@ -26,7 +26,7 @@ $ npm i macaca-cli -g
 $ macaca coverage -r java -f ./coverage.exec -c ./android_app_bootstrap/build/intermediates/classes/debug -s ./android_app_bootstrap/src/main/java --html ./reporter
 ```
 
-[collect coverage data](//github.com/xudafeng/android-app-bootstrap/blob/master/android_app_bootstrap/src/main/java/com/github/android_app_bootstrap/common/Utils.java#L132)
+[collect coverage data](//github.com/app-boostrap/android-app-bootstrap/blob/master/android_app_bootstrap/src/main/java/com/github/android_app_bootstrap/common/Utils.java#L132)
 
 ## Output
 
@@ -40,7 +40,7 @@ npmcdn.com: [android_app_bootstrap-debug.apk](//npmcdn.com/android-app-bootstrap
 | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor.git), auto upated at `Sun Mar 25 2018 17:40:17 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto upated at `Mon Mar 26 2018 16:33:50 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 

@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/xudafeng/android-app-bootstrap.git"
+    "url": "git://github.com/app-boostrap/android-app-bootstrap.git"
   },
   "license": "MIT"
 }
