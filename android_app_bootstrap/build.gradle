@@ -3,12 +3,12 @@ apply plugin: 'jacoco'
 apply plugin: 'pmd'
 
 jacoco {
-    toolVersion = '0.7.9'
+    toolVersion = '0.8.1'
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion '26.0.2'
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
 
     lintOptions {
         abortOnError false
@@ -16,8 +16,8 @@ android {
 
     defaultConfig {
         applicationId 'com.github.android_app_bootstrap'
-        minSdkVersion 19
-        targetSdkVersion 19
+        minSdkVersion 22
+        targetSdkVersion 22
     }
 
     buildTypes {
@@ -33,7 +33,9 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19+'
-    compile 'com.facebook.fresco:fresco:0.10.0'
-    compile 'com.alibaba:fastjson:1.2.38'
+    implementation 'com.android.support:support-v4:25.3.1'
+    implementation 'com.facebook.fresco:fresco:0.10.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation 'com.alibaba:fastjson:1.2.38'
+    implementation 'com.airbnb.android:lottie:2.5.4'
 }
