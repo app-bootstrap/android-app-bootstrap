@@ -97,7 +97,6 @@ public class DataHubActivity extends Activity implements View.OnClickListener {
                 showToast();
                 doRequest();
                 break;
-
         }
     }
 }
