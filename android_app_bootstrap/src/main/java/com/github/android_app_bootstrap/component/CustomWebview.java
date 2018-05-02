@@ -13,6 +13,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.webkit.JsResult;
@@ -20,9 +21,11 @@ import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.github.android_app_bootstrap.R;
@@ -49,6 +52,8 @@ public class CustomWebview extends WebView {
     private View parentView;
     private Activity parentActivity;
     private Toast loadingToast;
+
+    LottieAnimationView animationView = null;
 
     public CustomWebview(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
@@ -130,6 +135,8 @@ public class CustomWebview extends WebView {
             WebView.setWebContentsDebuggingEnabled(true);
         }
 
+        animationView = _parentView.findViewById(R.id.animation_view);
+
         setWebChromeClient(new WebChromeClient() {
             @Override
             public boolean onJsAlert(WebView view, String url, String message,
@@ -152,6 +159,9 @@ public class CustomWebview extends WebView {
                 super.onPageFinished(view, url);
                 isLoad = true;
                 loadingToast.cancel();
+                if (null != animationView) {
+                    animationView.setVisibility(View.GONE);
+                }
             }
 
             @Override
