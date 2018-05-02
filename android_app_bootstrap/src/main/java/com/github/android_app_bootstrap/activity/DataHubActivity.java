@@ -15,20 +15,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONException;
 import com.alibaba.fastjson.JSONObject;
 import com.github.android_app_bootstrap.R;
 import com.github.android_app_bootstrap.common.Utils;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 public class DataHubActivity extends Activity implements View.OnClickListener {
 
@@ -43,40 +38,26 @@ public class DataHubActivity extends Activity implements View.OnClickListener {
         }
 
         @Override
-        protected String doInBackground(Integer... params) {
-            HttpClient client = new DefaultHttpClient();
-            StringBuilder builder = new StringBuilder();
-            HttpGet myget = new HttpGet(API);
+        protected String doInBackground(Integer... params)  {
             String lastVersionStr = null;
             Log.i(TAG, API);
+
+            OkHttpClient client = new OkHttpClient();
+
             try {
-                HttpResponse response = client.execute(myget);
-                int statusCode = response.getStatusLine().getStatusCode();
-                Log.i(TAG, "status code: " + statusCode);
-                if (statusCode == 200) {
-                    BufferedReader reader = new BufferedReader(
-                            new InputStreamReader(response.getEntity()
-                                    .getContent()));
-                    for (String s = reader.readLine(); s != null; s = reader
-                            .readLine()) {
-                        builder.append(s);
-                    }
-                    JSONObject res = JSON.parseObject(builder.toString());
-                    Log.i(TAG, res.toJSONString());
-                    lastVersionStr = res.toJSONString();
-                } else {
-                    Log.i(TAG, "failed");
-                }
-            } catch (ClientProtocolException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
+                Request request = new Request.Builder()
+                        .url(API)
+                        .get()
+                        .build();
+
+                Response response = client.newCall(request).execute();
+                JSONObject res = JSON.parseObject(response.body().string());
+                Log.i(TAG, res.toJSONString());
+                lastVersionStr = res.toJSONString();
             } catch (IOException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            } catch (JSONException e) {
-                // TODO Auto-generated catch block
                 e.printStackTrace();
             }
+
             return lastVersionStr;
         }
 
@@ -120,4 +101,3 @@ public class DataHubActivity extends Activity implements View.OnClickListener {
         }
     }
 }
-
