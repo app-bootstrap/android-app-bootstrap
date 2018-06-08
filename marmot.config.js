@@ -6,7 +6,9 @@ const helper = require('marmot-cli/lib/helper');
 
 const pkg = require('./package');
 
-const dotGradle = path.join(__dirname, pkg.name, 'build.gradle');
+const appId = pkg.name.replace(/-/g, '_');
+
+const dotGradle = path.join(__dirname, appId, 'build.gradle');
 const dotGradleContent = fs.readFileSync(dotGradle, 'utf8');
 
 module.exports = async function () {
@@ -16,7 +18,7 @@ module.exports = async function () {
 
   console.log(JSON.stringify(gradle, null, 2));
   const version = `${gradle.ext.buildVersionName}.${gradle.ext.buildVersionCode}`;
-  const outputPath = `${pkg.name}/build/outputs`;
+  const outputPath = `${appId}/build/outputs`;
   return {
     files: [
       `${outputPath}/`,
@@ -25,7 +27,7 @@ module.exports = async function () {
       {
         version,
         type: 'debug',
-        path: `${outputPath}/apk/debug/debug/${pkg.name}.apk`
+        path: `${outputPath}/apk/debug/${appId}-debug.apk`
       }
     ],
     testInfo: {
