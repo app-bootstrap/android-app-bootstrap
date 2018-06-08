@@ -9,9 +9,15 @@
     "android_app_bootstrap/build/outputs/apk/android_app_bootstrap-debug.apk",
     "index.js"
   ],
+  "scripts": {
+    "marmot": "marmot report -c ./marmot.config.js"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/app-boostrap/android-app-bootstrap.git"
+  },
+  "devDependencies": {
+    "marmot-cli": "^1.0.0"
   },
   "license": "MIT"
 }

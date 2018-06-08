@@ -39,3 +39,8 @@ dependencies {
     implementation 'com.alibaba:fastjson:1.2.38'
     implementation 'com.airbnb.android:lottie:2.5.4'
 }
+
+ext {
+  buildVersionName = '1.0'
+  buildVersionCode = '0.2'
+}
