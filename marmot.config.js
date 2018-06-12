@@ -33,6 +33,7 @@ module.exports = async function () {
     testInfo: {
     },
     extraInfo: {
+      'build.gradle': JSON.stringify(gradle, null, 2)
     }
   };
 };
