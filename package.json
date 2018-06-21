@@ -17,7 +17,7 @@
     "url": "git://github.com/app-boostrap/android-app-bootstrap.git"
   },
   "devDependencies": {
-    "marmot-cli": "^1.0.0"
+    "marmot-cli": "^1.2.2"
   },
   "license": "MIT"
 }
