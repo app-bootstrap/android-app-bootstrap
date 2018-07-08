@@ -28,6 +28,11 @@ module.exports = async function () {
         version,
         type: 'debug',
         path: `${outputPath}/apk/debug/${appId}-debug.apk`
+      },
+      {
+        version,
+        type: 'release',
+        path: `${outputPath}/apk/release/${appId}-release-unsigned.apk`
       }
     ],
     testInfo: {
