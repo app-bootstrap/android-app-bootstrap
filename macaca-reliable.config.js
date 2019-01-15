@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const helper = require('marmot-cli/lib/helper');
+const helper = require('reliable-cli/lib/helper');
 
 const pkg = require('./package');
 

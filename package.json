@@ -10,7 +10,7 @@
     "index.js"
   ],
   "scripts": {
-    "marmot": "marmot report -c ./marmot.config.js"
+    "reliable": "reliable report -c ./reliable.config.js"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "macaca-datahub": "2",
-    "marmot-cli": "1"
+    "reliable-cli": "1"
   },
   "license": "MIT"
 }
