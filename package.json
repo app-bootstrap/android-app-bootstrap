@@ -10,13 +10,15 @@
     "index.js"
   ],
   "scripts": {
-    "reliable": "reliable report -c ./reliable.config.js"
+    "reliable": "reliable report -c ./reliable.config.js",
+    "contributor": "git-contributor"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/app-boostrap/android-app-bootstrap.git"
   },
   "devDependencies": {
+    "git-contributor": "^1.0.10",
     "macaca-datahub": "2",
     "reliable-cli": "1"
   },
