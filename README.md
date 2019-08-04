@@ -36,11 +36,11 @@ npmcdn.com: [android_app_bootstrap-debug.apk](//npmcdn.com/android-app-bootstrap
 
 ## Contributors
 
-|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/21149374?v=4" width="100px;"/><br/><sub><b>hanqiongly</b></sub>](https://github.com/hanqiongly)<br/>|
-| :---: | :---: |
+|[<img src="https://avatars1.githubusercontent.com/u/1011681?v=4" width="100px;"/><br/><sub><b>xudafeng</b></sub>](https://github.com/xudafeng)<br/>|[<img src="https://avatars3.githubusercontent.com/u/21149374?v=4" width="100px;"/><br/><sub><b>hanqiongly</b></sub>](https://github.com/hanqiongly)<br/>|[<img src="https://avatars3.githubusercontent.com/u/1209810?v=4" width="100px;"/><br/><sub><b>paradite</b></sub>](https://github.com/paradite)<br/>|
+| :---: | :---: | :---: |
 
 
-This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Sat Jun 29 2019 09:47:46 GMT+0800`.
+This project follows the git-contributor [spec](https://github.com/xudafeng/git-contributor), auto updated at `Sun Aug 04 2019 12:06:41 GMT+0800`.
 
 <!-- GITCONTRIBUTOR_END -->
 
