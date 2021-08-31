@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 apply plugin: 'jacoco'
 apply plugin: 'pmd'
+apply plugin: 'com.alipay.apollo.baseline.config'
 
 jacoco {
     toolVersion = '0.8.1'
 }
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 29
     buildToolsVersion "27.0.3"
 
     lintOptions {
@@ -16,8 +17,11 @@ android {
 
     defaultConfig {
         applicationId 'com.github.android_app_bootstrap'
-        minSdkVersion 22
-        targetSdkVersion 22
+        minSdkVersion 21
+        targetSdkVersion 29
+        ndk {
+            abiFilters 'armeabi'
+        }
     }
 
     buildTypes {
@@ -33,11 +37,13 @@ android {
 }
 
 dependencies {
+    implementation platform("com.mpaas.android:$mpaas_artifact:$mpaas_baseline")
     implementation 'com.android.support:support-v4:27.1.1'
     implementation 'com.facebook.fresco:fresco:0.10.0'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     implementation 'com.alibaba:fastjson:1.2.38'
     implementation 'com.airbnb.android:lottie:2.5.4'
+    implementation 'com.mpaas.android:nebula'
 }
 
 ext {

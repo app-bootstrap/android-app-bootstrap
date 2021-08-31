@@ -1,12 +1,23 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply plugin: 'com.alipay.apollo.optimize'// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
+    ext.mpaas_artifact = "mpaas-baseline"
+    ext.mpaas_baseline = "10.1.68-34"
     repositories {
         google()
         jcenter()
+        maven {
+            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            name 'alipay'
+            credentials {
+                username 'mvn_read_ws'
+                password 'mrk8929'
+            }
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.1'
+        classpath 'com.android.tools.build:gradle:4.0.0'
+        classpath 'com.android.boost.easyconfig:easyconfig:2.4.3'
     }
 }
 
@@ -14,5 +25,13 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            name 'alipay'
+            credentials {
+                username 'mvn_read_ws'
+                password 'mrk8929'
+            }
+        }
     }
 }

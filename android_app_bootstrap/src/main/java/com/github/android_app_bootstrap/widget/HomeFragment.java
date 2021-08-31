@@ -16,6 +16,7 @@ import com.github.android_app_bootstrap.R;
 import com.github.android_app_bootstrap.activity.*;
 import com.github.android_app_bootstrap.common.Constants;
 import com.github.android_app_bootstrap.common.Utils;
+import com.mpaas.nebula.adapter.api.MPNebula;
 
 public class HomeFragment extends Fragment implements Callback, OnClickListener {
 
@@ -40,6 +41,10 @@ public class HomeFragment extends Fragment implements Callback, OnClickListener 
         startActivity(intent);
     }
 
+    void goWebView() {
+        MPNebula.startUrl("https://www.github.com");
+    }
+
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width,
                                int height) {
@@ -61,6 +66,9 @@ public class HomeFragment extends Fragment implements Callback, OnClickListener 
         switch (view.getId()) {
             case R.id.list_button:
                 goList();
+                break;
+            case R.id.webview_button:
+                goWebView();
                 break;
         }
     }
