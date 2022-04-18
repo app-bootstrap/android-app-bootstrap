@@ -56,6 +56,10 @@ public class TableActivity extends Activity {
                         Intent dataHubIntent = new Intent(TableActivity.this, DataHubActivity.class);
                         startActivity(dataHubIntent);
                         break;
+                    case 5:
+                        Intent httpRequestIntent = new Intent(TableActivity.this, HttpRequestActivity.class);
+                        startActivity(httpRequestIntent);
+                        break;
                 }
             }
         });
@@ -69,6 +73,7 @@ public class TableActivity extends Activity {
         data.add("Alert");
         data.add("Location");
         data.add("DataHub");
+        data.add("HTTP request");
         data.add("Test test test");
         data.add("Test test test");
         data.add("Test test test");

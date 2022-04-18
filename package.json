@@ -19,7 +19,7 @@
   },
   "devDependencies": {
     "git-contributor": "1",
-    "macaca-datahub": "3",
+    "macaca-datahub": "4",
     "reliable-cli": "1"
   },
   "license": "MIT"
