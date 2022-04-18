@@ -10,9 +10,6 @@ jacoco {
 android {
     compileSdkVersion 29
 
-    lintOptions {
-        abortOnError false
-    }
 
     defaultConfig {
         applicationId 'com.github.android_app_bootstrap'
@@ -32,6 +29,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
+    }
+    lint {
+        abortOnError false
     }
 }
 

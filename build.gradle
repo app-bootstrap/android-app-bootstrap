@@ -16,7 +16,7 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath 'com.android.tools.build:gradle:7.1.3'
         classpath 'com.android.boost.easyconfig:easyconfig:2.6.5'
     }
 }
