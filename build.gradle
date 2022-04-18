@@ -7,7 +7,7 @@ buildscript {
         google()
         jcenter()
         maven {
-            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            url 'https://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
             name 'alipay'
             credentials {
                 username 'mvn_read_ws'
