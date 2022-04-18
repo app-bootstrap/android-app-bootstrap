@@ -9,7 +9,6 @@ jacoco {
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "27.0.3"
 
     lintOptions {
         abortOnError false

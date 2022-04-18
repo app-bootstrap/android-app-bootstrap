@@ -16,8 +16,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.0'
-        classpath 'com.android.boost.easyconfig:easyconfig:2.4.3'
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        classpath 'com.android.boost.easyconfig:easyconfig:2.6.5'
     }
 }
 
@@ -26,7 +26,7 @@ allprojects {
         google()
         jcenter()
         maven {
-            url 'http://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
+            url 'https://mvn.cloud.alipay.com/nexus/content/repositories/releases/'
             name 'alipay'
             credentials {
                 username 'mvn_read_ws'
