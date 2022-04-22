@@ -1,4 +1,4 @@
-package com.github.android_app_bootstrap.application;
+package com.github.android_app_bootstrap;
 
 import android.app.Application;
 import android.content.Context;
@@ -7,14 +7,14 @@ import android.util.Log;
 import com.alipay.mobile.framework.quinoxless.IInitCallback;
 import com.alipay.mobile.framework.quinoxless.QuinoxlessFramework;
 
-public class MainApplication extends Application {
+public class DemoApplication extends Application {
     @Override
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         QuinoxlessFramework.setup(this, new IInitCallback() {
             @Override
             public void onPostInit() {
-                onMpaaSInitialized(MainApplication.this);
+                onMpaaSInitialized(DemoApplication.this);
             }
         });
     }
